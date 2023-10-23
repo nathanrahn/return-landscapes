@@ -1,0 +1,25 @@
+_target_: experiments.train_ppo.TrainPPO
+
+seed: ${random_seed}
+num_seeds: 3
+
+env_id: halfcheetah
+total_timesteps: 60000000
+learning_rate: 0.0026
+num_envs: 2048
+num_steps: 16
+anneal_lr: false
+gamma: 0.99
+gae_lambda: 0.95
+num_minibatches: 2
+update_epochs: 4
+norm_adv: true
+clip_coef: 0.2
+clip_vloss: false
+ent_coef: 0.0
+vf_coef: 2
+max_grad_norm: 1
+target_kl: null
+
+agent_num_logs: 10
+eval_episodes: 10

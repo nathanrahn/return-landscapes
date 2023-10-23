@@ -1,0 +1,23 @@
+defaults:
+  - experiment: train_jaxrl
+  - job_config: local_default
+  - _self_
+
+hydra:
+  run:
+    dir: ${custom_run_dir:}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: ${custom_run_dir:}/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+project_name: "nonseq-exp"
+
+wandb:
+  project_name: ${project_name}
+  entity_name: ${project_name}
+
+# "local" or "compute_canada", set in job_config.
+run_host: ???
+
+random_seed: 4321
+
+use_wandb: true

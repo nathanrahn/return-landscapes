@@ -1,0 +1,13 @@
+_target_: experiments.policy_variance_mujoco.PolicyVariance
+
+run_name: "33512339_0"
+ckpt_indexes: [850000]
+eval_episodes: 1000
+batch_size: 1000
+episode_length: 1000
+
+seed: 0
+
+# One of: action, parameter, init_state, init_parameter, td3_optimization
+noise_type: td3_optimization
+noise_amounts: [0.0003]

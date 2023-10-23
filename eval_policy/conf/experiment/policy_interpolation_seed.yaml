@@ -1,0 +1,11 @@
+_target_: experiments.policy_interpolation_seed.PolicyInterpolationSeed
+
+batch_size: 512
+num_points: 1000
+num_purd_samples: 1000
+noise_amount: 0.0003
+same_seed: false
+seed: 0
+first_half: true
+
+run_name: "16308412_0"

@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - override /hydra/launcher: joblib
+
+hydra:
+  launcher:
+    verbose: 1
+
+run_host: "local"
+
+wandb:
+  mode: online

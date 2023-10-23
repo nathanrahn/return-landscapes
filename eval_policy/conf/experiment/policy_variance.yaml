@@ -1,0 +1,13 @@
+_target_: experiments.policy_variance.PolicyVariance
+
+run_name: "32437396_0"
+ckpt_indexes: [850000]
+eval_episodes: 1000
+batch_size: 1000
+episode_length: 1000
+
+seed: 0
+
+# One of: action, parameter, init_state, init_parameter, td3_optimization, td3_opt_with_action
+noise_type: action
+noise_amounts: [0.1,0.2]

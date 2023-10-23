@@ -1,0 +1,5 @@
+# @package _global_
+run_host: "local"
+
+wandb:
+  mode: online

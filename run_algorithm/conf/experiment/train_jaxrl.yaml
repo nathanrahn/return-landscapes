@@ -1,0 +1,73 @@
+_target_: experiments.train_jaxrl.TrainJaxRL
+
+# Environment name
+env_name: "halfcheetah"
+# Random seed.
+seed: ${random_seed}
+# Number of episodes used for evaluation.
+eval_episodes: 10
+# Max episode length for evaluation episodes.
+eval_episode_length: 1000
+# Logging interval.
+log_interval: 1000
+# Eval interval.
+eval_interval: 5000
+# Mini batch size.
+actor_batch_size: 256
+critic_batch_size: 256
+# Number of training steps.
+max_steps: 1e6
+# Number of training steps to start training.
+start_training: 1e4
+# Use tqdm progress bar.
+tqdm: True
+
+# For standard exploration, the maximum length of an exploration episode before resetting to start
+# state. For NSE, the maximum length of a rollout before resetting to a new replay buffer state.
+reset_interval: 1000
+
+# Whether to save checkpoints of the actor, critic, replay buffer, etc.
+checkpoint: True
+
+# Env step to start logging at
+agent_log_starts: [50000, 150000, 250000, 350000, 450000, 550000, 650000, 750000, 850000, 950000]
+# How frequently to log (in env steps)
+agent_log_step: 2
+# Agent num logs
+agent_num_logs: 1000
+
+updates_per_step: 1
+replay_buffer_size: 1e6
+algo: "ddpg"
+
+num_seeds: 1
+
+sac_config:
+  actor_lr: 3e-4
+  critic_lr: 3e-4
+  temp_lr: 3e-4
+
+  hidden_dims: [256, 256]
+
+  discount: 0.99
+
+  tau: 0.005
+
+  target_entropy: null
+  init_temperature: 1.0
+
+
+ddpg_config:
+  actor_lr: 3e-4
+  critic_lr: 3e-4
+
+  hidden_dims: [256, 256]
+
+  discount: 0.99
+
+  tau: 0.005
+  target_update_period: 2
+
+  policy_noise: 0.2
+  noise_clip: 0.5
+  exploration_noise: 0.0

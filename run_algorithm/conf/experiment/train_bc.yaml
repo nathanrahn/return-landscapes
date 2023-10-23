@@ -1,0 +1,38 @@
+_target_: experiments.train_bc.TrainBC
+
+# Run name of previous run to behavior clone.
+# td3_dmc_v0, ant
+run_name: "16308412_3"
+# Random seed.
+seed: 0
+# Number of episodes used for evaluation.
+eval_episodes: 10
+# Max episode length for evaluation episodes.
+eval_episode_length: 1000
+# Logging interval.
+log_interval: 1000
+# Eval interval.
+eval_interval: 5000
+# Number of training steps.
+max_steps: 1e6
+# Use tqdm progress bar.
+tqdm: True
+
+# Whether to save checkpoints of the actor, critic, replay buffer, etc.
+checkpoint: True
+
+# Env step to start logging at
+agent_log_starts: [50000, 150000, 250000, 350000, 450000, 550000, 650000, 750000, 850000, 950000]
+# How frequently to log (in env steps)
+agent_log_step: 1
+# Agent num logs
+agent_num_logs: 1
+
+replay_buffer_size: 1e6
+
+
+# Batch size for bc
+batch_size: 256
+
+# The checkpoint to behavior clone from.
+ckpt_index: 950000
