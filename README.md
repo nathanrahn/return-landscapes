@@ -10,7 +10,8 @@ We show that the landscape exhibits surprising structure by finding simple paths
 To conclude, we develop a distribution-aware procedure which finds such paths, navigating away from noisy neighborhoods in order to improve the robustness of a policy.
 Taken together, our results provide new insight into the optimization, evaluation, and design of agents.
 
-<img width="1179" alt="Screen Shot 2023-10-23 at 6 29 21 PM" src="https://github.com/nathanrahn/return-landscapes/assets/77698360/15718ba6-c3a9-4716-8083-fe32d10d0beb">
+![return_landscapes](https://github.com/nathanrahn/return-landscapes/assets/77698360/b4926fee-b71f-495f-bf84-2b6f22e5bd27)
+
 
 ## Hydra
 
